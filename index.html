@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sharma Family Restaurant – Pure Veg North Indian</title>
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Pure vegetarian North Indian family restaurant. Ghar jaisa khana. Order on WhatsApp.">
+<style>
+:root{--bg:#fbf7ee;--fg:#22301f;--card:#fff;--green:#14532d;--green2:#1e6b3c;--gold:#c9922e;--muted:#6b6f5f;--line:rgba(20,83,45,.14);--wa:#0d813d;--gt:#14532d;--gold-t:#7d5810;--shadow:0 8px 24px rgba(20,60,30,.10);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a12;--fg:#f1ecdd;--card:#172a1e;--muted:#a9b3a0;--line:rgba(201,146,46,.22);--shadow:0 8px 24px rgba(0,0,0,.35);--green:#2a7d4b;--gt:#7fd39c;--gold-t:#e0b25a}}
+:root[data-theme="dark"]{--bg:#0e1a12;--fg:#f1ecdd;--card:#172a1e;--muted:#a9b3a0;--line:rgba(201,146,46,.22);--shadow:0 8px 24px rgba(0,0,0,.35);--green:#2a7d4b;--gt:#7fd39c;--gold-t:#e0b25a}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body{background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,'Segoe UI',sans-serif;padding-bottom:84px;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:Georgia,'Times New Roman',serif}
+a{color:inherit}
+.wrap{max-width:1080px;margin:auto;padding:0 20px}
+section{padding:64px 0}
+.eyebrow{color:var(--gold-t);letter-spacing:.18em;font-size:.75rem;font-weight:700;text-transform:uppercase;text-align:center}
+h2{font-size:clamp(1.8rem,6vw,2.6rem);text-align:center;margin:6px 0 10px;line-height:1.2}
+.sub{text-align:center;color:var(--muted);max-width:520px;margin:0 auto 32px}
+.orn{display:block;margin:0 auto 14px;width:64px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--bg);background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:Georgia,serif;font-weight:700;color:var(--gt);font-size:1.15rem;text-decoration:none;display:flex;gap:8px;align-items:center}
+.logo i{font-style:normal;background:var(--green);color:#fff;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-size:.85rem;border:2px solid var(--gold)}
+.burger{width:44px;height:44px;border:1px solid var(--line);background:var(--card);border-radius:12px;cursor:pointer;display:grid;place-content:center;gap:5px}
+.burger span{display:block;width:20px;height:2px;background:var(--fg);transition:.25s}
+.burger.on span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.on span:nth-child(2){opacity:0}
+.burger.on span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.links{position:absolute;left:0;right:0;top:60px;background:var(--bg);border-bottom:1px solid var(--line);display:grid;gap:2px;padding:8px 20px 18px;max-height:0;overflow:hidden;opacity:0;visibility:hidden;transition:.3s}
+.links.open{max-height:420px;opacity:1;visibility:visible}
+.links a{text-decoration:none;padding:13px 4px;font-weight:600;border-bottom:1px solid var(--line)}
+.links .btn{margin-top:12px;text-align:center;border:0}
+@media(min-width:800px){.burger{display:none}.links{position:static;display:flex;align-items:center;gap:26px;max-height:none;opacity:1;visibility:visible;padding:0;border:0;background:none}.links a{border:0;padding:0;font-size:.95rem}.links .btn{margin:0;padding:10px 20px}}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 26px;border-radius:999px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-size:1rem;transition:transform .2s,box-shadow .2s;color:#fff;background:var(--green)}
+.btn:active{transform:scale(.97)}
+.btn.wa{background:var(--wa);box-shadow:0 8px 22px rgba(31,168,85,.4)}
+.btn.ghost{background:transparent;border:2px solid var(--gold);color:#f3d58f}
+.btn.line{background:transparent;border:2px solid var(--green);color:var(--gt)}
+/* hero */
+.hero{position:relative;color:#fff;text-align:center;padding:84px 0 72px;background:radial-gradient(circle at 20% 10%,rgba(201,146,46,.28),transparent 45%),radial-gradient(circle at 85% 90%,rgba(201,146,46,.18),transparent 40%),linear-gradient(160deg,#0e3d20,#14532d 55%,#0a2c17)}
+.hero:before{content:"";position:absolute;inset:0;opacity:.07;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:22px 22px}
+.hero .wrap{position:relative}
+.pill{display:inline-block;border:1px solid var(--gold);color:#f3d58f;padding:5px 14px;border-radius:999px;font-size:.78rem;letter-spacing:.1em;margin-bottom:20px}
+.hero h1{font-size:clamp(2.3rem,10vw,4.6rem);line-height:1.08}
+.hero h1 em{color:var(--gold);font-style:normal;display:block;font-size:.5em;margin-top:10px;font-weight:400;font-style:italic}
+.hero p{max-width:520px;margin:18px auto 28px;opacity:.92}
+.cta{display:flex;flex-direction:column;gap:12px;max-width:340px;margin:auto}
+@media(min-width:560px){.cta{flex-direction:row;max-width:none;justify-content:center}}
+.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;margin-top:34px;font-size:.88rem;opacity:.92}
+/* menu */
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 14px;scrollbar-width:none;position:sticky;top:calc(61px + env(safe-area-inset-top,0px));z-index:20;background:var(--bg)}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;padding:10px 20px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--fg);font-weight:600;cursor:pointer;font-size:.92rem;min-height:44px}
+.tab.on{background:var(--green);color:#fff;border-color:var(--green)}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.card{background:var(--card);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);transition:transform .3s}
+@media(hover:hover){.card:hover{transform:translateY(-4px)}}
+.img{height:150px;position:relative;display:grid;place-items:center;font-size:3.6rem;overflow:hidden}
+.img:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,rgba(255,255,255,.35),transparent 55%)}
+.img span{position:relative;filter:drop-shadow(0 6px 8px rgba(0,0,0,.25))}
+.img b{position:absolute;left:10px;top:10px;background:rgba(255,255,255,.92);color:#14532d;font-size:.66rem;padding:2px 8px;border-radius:999px;display:flex;align-items:center;gap:5px}
+.img b:before{content:"";width:9px;height:9px;border:1.5px solid #1fa855;border-radius:2px;background:radial-gradient(#1fa855 45%,transparent 50%)}
+.c0{background:linear-gradient(135deg,#e2a339,#b5651d)}.c1{background:linear-gradient(135deg,#d9822b,#8f2d14)}.c2{background:linear-gradient(135deg,#2f8a53,#14532d)}.c3{background:linear-gradient(135deg,#e8c26a,#a9741f)}.c4{background:linear-gradient(135deg,#c9922e,#6b3f16)}
+.body{padding:16px}
+.row{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.row h3{font-size:1.05rem}
+.price{color:var(--gt);font-weight:800;white-space:nowrap}
+.body p{color:var(--muted);font-size:.88rem;margin:4px 0 12px}
+.add{width:100%;min-height:44px;border-radius:12px;border:1.5px solid var(--green);background:transparent;color:var(--gt);font-weight:700;cursor:pointer;font-size:.95rem}
+.add.in{background:var(--green);color:#fff}
+.star{border:1.5px solid var(--gold)}
+/* about */
+.about{background:var(--card);border-block:1px solid var(--line)}
+.split{display:grid;gap:32px;align-items:center}
+@media(min-width:800px){.split{grid-template-columns:1fr 1fr}}
+.portrait{aspect-ratio:1;border-radius:24px;background:linear-gradient(150deg,#14532d,#c9922e);display:grid;place-items:center;font-size:5.5rem;box-shadow:var(--shadow);position:relative}
+.portrait small{position:absolute;bottom:14px;left:14px;right:14px;background:rgba(0,0,0,.4);color:#fff;font-size:.75rem;padding:6px 12px;border-radius:12px;text-align:center}
+.split h2{text-align:left}.split .eyebrow{text-align:left}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+.stats div{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:12px 6px;text-align:center;font-size:.8rem;color:var(--muted)}
+.stats b{display:block;font-size:1.4rem;color:var(--gt);font-family:Georgia,serif}
+/* reviews */
+.rev{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 20px;margin:0 -20px;scrollbar-width:none}
+.rev::-webkit-scrollbar{display:none}
+.r{flex:0 0 min(84%,340px);scroll-snap-align:center;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+.r q{display:block;font-size:.98rem;margin:10px 0 16px;quotes:none}
+.st{color:var(--gold);letter-spacing:2px}
+.who{display:flex;align-items:center;gap:10px;font-size:.88rem}
+.who i{width:38px;height:38px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-style:normal;font-weight:700}
+.who small{display:block;color:var(--muted)}
+@media(min-width:900px){.rev{display:grid;grid-template-columns:repeat(3,1fr);overflow:visible;padding:6px 0}.r{flex:none}}
+/* cta band */
+.band{background:linear-gradient(135deg,#0e3d20,#14532d);color:#fff;text-align:center;border-radius:28px;padding:44px 22px;position:relative;overflow:hidden}
+.band h2{color:#fff}.band p{opacity:.9;max-width:460px;margin:0 auto 24px}
+/* contact */
+.contact{display:grid;gap:20px}
+@media(min-width:800px){.contact{grid-template-columns:1fr 1.2fr}}
+.info{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+.item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.item:last-of-type{border:0}
+.item em{font-style:normal;font-size:1.3rem}
+.item small{display:block;color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em}
+.tag{display:inline-block;margin-left:6px;background:#fff3cd;color:#7a5a00;border:1px dashed #c9922e;border-radius:6px;font-size:.62rem;font-weight:700;padding:1px 6px;letter-spacing:.06em;vertical-align:middle}
+.hide-tags .tag{display:none}
+.map{border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:var(--card);display:flex;flex-direction:column}
+.map svg{width:100%;height:100%;min-height:260px;display:block}
+.mapbar{padding:14px;display:flex;gap:10px;flex-wrap:wrap}
+.mapbar .btn{flex:1;min-height:44px;padding:10px 14px;font-size:.9rem}
+footer{background:#0a2c17;color:#dfe8dc;text-align:center;padding:36px 20px;font-size:.85rem}
+footer .serif{font-size:1.3rem;color:var(--gold)}
+/* order bar + cart */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:var(--bg);background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(10px);border-top:1px solid var(--line);display:flex;gap:10px;justify-content:center}
+.bar .btn{flex:1;max-width:420px}
+.bar .cartb{flex:0 0 auto;max-width:none;background:var(--green);padding:12px 18px}
+.bar .wa{animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(31,168,85,.55)}70%{box-shadow:0 0 0 14px rgba(31,168,85,0)}100%{box-shadow:0 0 0 0 rgba(31,168,85,0)}}
+.sheet{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.5);display:none;align-items:flex-end;justify-content:center}
+.sheet.on{display:flex}
+.panel{background:var(--bg);width:100%;max-width:520px;border-radius:24px 24px 0 0;padding:20px 20px calc(20px + env(safe-area-inset-bottom,0px));max-height:80%;overflow:auto;animation:up .3s}
+@keyframes up{from{transform:translateY(40px);opacity:0}}
+.line-i{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.qty{display:flex;align-items:center;gap:10px}
+.qty button{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--green);background:none;color:var(--gt);font-size:1.1rem;cursor:pointer}
+.tot{display:flex;justify-content:space-between;font-weight:800;font-size:1.1rem;margin:14px 0}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
+
+.skip{position:absolute;left:-999px;top:8px;z-index:100;background:var(--green);color:#fff;padding:10px 16px;border-radius:8px}
+.skip:focus{left:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--gold-t);outline-offset:2px}
+.panel:focus{outline:none}
+.qty button{width:44px;height:44px}
+.qty span{min-width:20px;text-align:center;font-weight:700}
+.item>div{min-width:0;overflow-wrap:anywhere}
+.item a{display:inline-block;padding:8px 0;min-height:44px}
+.bar .btn{padding:12px 14px;font-size:.95rem}
+.bar .btn.cartb{padding:12px 14px}
+@media(min-width:420px){.bar .btn{padding:12px 26px;font-size:1rem}.bar .btn.cartb{padding:12px 18px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#menu">Skip to menu</a>
+<nav aria-label="Main"><div class="wrap nav">
+  <a href="#home" class="logo"><i>SF</i>Sharma Family</a>
+  <button class="burger" id="bg" aria-label="Open menu" aria-expanded="false" aria-controls="links"><span></span><span></span><span></span></button>
+  <div class="links" id="links">
+    <a href="#menu">Menu</a><a href="#about">Our Story</a><a href="#reviews">Reviews</a><a href="#contact">Find Us</a>
+    <a class="btn wa" href="#" data-order>💬 Order on WhatsApp</a>
+  </div>
+</div></nav>
+<main>
+<header class="hero" id="home"><div class="wrap">
+  <span class="pill">PURE VEGETARIAN · FAMILY DINING</span>
+  <h1>Sharma Family Restaurant<em>Ghar jaisa khana</em></h1>
+  <p>Authentic North Indian dishes, made fresh every day with hand-ground masalas and pure desi ghee — the way mother makes it.</p>
+  <div class="cta"><a class="btn wa" href="#" data-order>💬 Order on WhatsApp</a><a class="btn ghost" href="#menu">Explore Menu</a></div>
+  <div class="trust"><span>⭐ 4.8 Guest Rating</span><span>🌿 100% Pure Veg</span><span>🛵 Home Delivery</span></div>
+</div></header>
+
+<section id="menu"><div class="wrap">
+  <p class="eyebrow rv">Our Menu</p><h2 class="rv">Cooked Fresh, Served with Love</h2><span class="orn"></span>
+  <p class="sub rv">Tap "Add" to build your order, then send it to us on WhatsApp.</p>
+  <div class="tabs" id="tabs" role="group" aria-label="Menu categories"></div>
+  <div class="grid" id="items"></div>
+</div></section>
+
+<section class="about" id="about"><div class="wrap split">
+  <div class="portrait rv">👨‍🍳<small>Photo placeholder — Mr. Ramesh &amp; Sunita Sharma</small></div>
+  <div class="rv">
+    <p class="eyebrow">Our Story</p><h2>A Family Kitchen, Open to All</h2>
+    <p style="margin-bottom:12px">Mr. Ramesh Sharma and his wife Sunita opened this restaurant with one simple idea: serve guests the same food they cook for their own family.</p>
+    <p>For over two decades, every masala has been ground in-house, every dal simmered slowly, and every roti made fresh. Come as a guest, leave as family.</p>
+    <div class="stats"><div><b>20+</b>Years</div><div><b>50+</b>Dishes</div><div><b>100%</b>Pure Veg</div></div>
+  </div>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+  <p class="eyebrow rv">Testimonials</p><h2 class="rv">Loved by Families</h2><span class="orn"></span>
+  <p class="sub rv">Swipe to read what our guests say.</p>
+  <div class="rev" id="rev" tabindex="0" role="region" aria-label="Customer reviews"></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap"><div class="band rv">
+  <h2>Hungry? Order in 30 Seconds</h2>
+  <p>Pick your dishes, tap once, and your order is ready to send on WhatsApp.</p>
+  <a class="btn wa" href="#" data-order>💬 Order on WhatsApp</a>
+</div></div></section>
+
+<section id="contact" style="padding-top:0"><div class="wrap">
+  <p class="eyebrow rv">Find Us</p><h2 class="rv">Come Dine With Us</h2><span class="orn"></span>
+  <div class="contact rv" id="contactBox">
+    <div class="info">
+      <div class="item"><em>📍</em><div><small>Address <span class="tag">PLACEHOLDER</span></small><span data-c="address"></span></div></div>
+      <div class="item"><em>📞</em><div><small>Phone <span class="tag">PLACEHOLDER</span></small><a data-c="phone" data-href="tel"></a></div></div>
+      <div class="item"><em>✉️</em><div><small>Email <span class="tag">PLACEHOLDER</span></small><a data-c="email" data-href="mailto"></a></div></div>
+      <div class="item"><em>🕒</em><div><small>Opening Hours <span class="tag">PLACEHOLDER</span></small><span data-c="hours"></span></div></div>
+      <a class="btn wa" style="width:100%;margin-top:14px" href="#" data-order>💬 Order on WhatsApp</a>
+    </div>
+    <div class="map">
+      <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Map preview">
+        <rect width="400" height="300" fill="#e9e3d2"/>
+        <path d="M0 210 Q120 170 230 200 T400 160 V300 H0Z" fill="#cfe0c3"/>
+        <g stroke="#fff" stroke-width="14" fill="none" stroke-linecap="round"><path d="M-10 90 L410 130"/><path d="M150 -10 L210 310"/><path d="M-10 250 L410 230" stroke-width="9"/></g>
+        <g stroke="#f6f1e2" stroke-width="5" fill="none"><path d="M280 -10 L320 310"/><path d="M-10 30 L410 50"/></g>
+        <circle cx="205" cy="120" r="34" fill="#14532d" opacity=".15"/>
+        <path d="M205 150 C180 118 182 92 205 92 C228 92 230 118 205 150Z" fill="#14532d" stroke="#c9922e" stroke-width="3"/><circle cx="205" cy="112" r="7" fill="#fff"/>
+        <text x="205" y="176" text-anchor="middle" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#14532d">Sharma Family Restaurant</text>
+      </svg>
+      <div class="mapbar"><a class="btn" id="mapOpen" target="_blank" rel="noopener">📍 Open in Google Maps</a><a class="btn line" id="mapDir" target="_blank" rel="noopener">➜ Get Directions</a></div>
+    </div>
+  </div>
+</div></section>
+
+</main>
+<footer><div class="serif">Sharma Family Restaurant</div><p>Ghar jaisa khana · Pure Vegetarian · Home Delivery</p><p style="opacity:.6;margin-top:8px">© <span id="yr"></span> All rights reserved.</p></footer>
+
+<div class="sr" id="live" aria-live="polite"></div>
+<div class="bar"><button class="btn cartb" id="cartBtn" style="display:none" aria-haspopup="dialog"></button><a class="btn wa" href="#" data-order>💬 Order on WhatsApp</a></div>
+<div class="sheet" id="sheet"><div class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="ct" tabindex="-1"><h3 id="ct" class="serif" style="font-size:1.3rem;margin-bottom:6px">Your Order</h3><div id="lines"></div><div class="tot"><span>Total</span><span id="total"></span></div><button class="btn wa" style="width:100%" id="send">💬 Send Order on WhatsApp</button><button class="btn line" style="width:100%;margin-top:10px" id="close">Keep Browsing</button></div></div>
+
+<script>
+document.documentElement.classList.add("js");
+/* ===== CLIENT DETAILS — replace these placeholders with real information ===== */
+const CONFIG={
+  name:"Sharma Family Restaurant",
+  whatsapp:"919876512345",            // PLACEHOLDER — digits only, with country code
+  phone:"+91 98765 12345",            // PLACEHOLDER
+  email:"hello@sharmafamily.example", // PLACEHOLDER
+  address:"Shop 4, Main Market Road, Sector 15, Jaipur, Rajasthan 302001", // PLACEHOLDER
+  hours:"Open daily: 11:00 AM – 10:30 PM", // PLACEHOLDER
+  showPlaceholderTags:true            // set false to hide the yellow PLACEHOLDER labels
+};
+/* ============================================================================== */
+const MENU={
+ "Starters":[["Paneer Tikka",240,"🧀","Tandoor-grilled paneer, mint chutney"],["Hara Bhara Kabab",180,"🥬","Spinach and green pea patties"],["Veg Samosa (2 pcs)",50,"🥟","Crisp, with tamarind chutney"],["Dahi Ke Kabab",210,"🍘","Soft hung-curd kababs"]],
+ "Mains":[["Paneer Butter Masala",260,"🍛","Rich tomato-cashew gravy"],["Dal Makhani",220,"🫘","Slow-cooked overnight, finished with butter"],["Shahi Paneer",270,"🍛","Creamy royal-style gravy"],["Chole Masala",190,"🫘","Punjabi-style chickpea curry"],["Mix Veg",200,"🥕","Seasonal vegetables in home masala"]],
+ "Thali & Rice":[["Sharma Special Thali",280,"🍽️","2 sabzi, dal, rice, 3 roti, salad, sweet",1],["Mini Thali",180,"🍽️","1 sabzi, dal, rice, 2 roti"],["Veg Biryani",210,"🍚","Fragrant basmati with raita"],["Jeera Rice",120,"🍚","Cumin-tempered basmati"]],
+ "Breads":[["Butter Naan",45,"🫓","Tandoor-baked"],["Garlic Naan",60,"🫓","With garlic and coriander"],["Tandoori Roti",20,"🫓","Whole wheat"],["Stuffed Paratha",70,"🫓","Aloo / Paneer / Gobhi"]],
+ "Sweets":[["Gulab Jamun (2 pcs)",70,"🍮","Warm, in cardamom syrup"],["Gajar Halwa",110,"🥕","Seasonal, with dry fruits"],["Sweet Lassi",70,"🥛","Thick and chilled"],["Masala Chai",25,"☕","Fresh ginger and elaichi"]]
+};
+const REVIEWS=[["Neha Gupta","Regular guest","The dal makhani tastes exactly like home. We come here every Sunday with the whole family."],["Amit Kumar","Delivery customer","Hot food, quick delivery and very fair prices. The Special Thali is amazing value."],["Sunil Rathore","Family diner","Clean, welcoming and the paneer butter masala is the best in the area."],["Priya Verma","Birthday celebration","Booked for my mother's birthday — warm service and the halwa was perfect."],["Rakesh Jain","Office lunch","Ordered for 15 people on WhatsApp. Everything arrived on time and tasted fresh."]];
+const cats=Object.keys(MENU);let cat=cats[0],cart={},lastFocus=null;
+const $=id=>document.getElementById(id),live=t=>{$("live").textContent=t};
+const WA=(CONFIG.whatsapp||CONFIG.phone).replace(/\D/g,""),fmt=n=>"₹"+n.toLocaleString("en-IN");
+const qty=()=>Object.values(cart).reduce((a,c)=>a+c.q,0),sum=()=>Object.values(cart).reduce((a,c)=>a+c.q*c.p,0);
+const lab=n=>cart[n]?`${n}: ${cart[n].q} in order, add one more`:`Add ${n} to order`;
+function tabs(){$("tabs").innerHTML=cats.map((c,i)=>`<button class="tab ${c===cat?'on':''}" data-cat="${i}" aria-pressed="${c===cat}">${c}</button>`).join("")}
+function items(){const k=cats.indexOf(cat);$("items").innerHTML=MENU[cat].map((m,i)=>`<div class="card ${m[4]?'star':''}"><div class="img c${k}"><b>PURE VEG</b><span aria-hidden="true">${m[2]}</span></div><div class="body"><div class="row"><h3>${m[0]}</h3><span class="price">${fmt(m[1])}</span></div><p>${m[3]}</p><button class="add ${cart[m[0]]?'in':''}" data-i="${i}" aria-label="${lab(m[0])}">${cart[m[0]]?'✓ Added ×'+cart[m[0]].q:'+ Add to order'}</button></div></div>`).join("")}
+function upd(){const b=$("cartBtn"),q=qty();b.style.display=q?"inline-flex":"none";b.textContent=`🛒 ${q} · ${fmt(sum())}`;b.setAttribute("aria-label",`View order: ${q} items, ${fmt(sum())}`)}
+function lines(){const k=Object.keys(cart);if(!k.length){if($("sheet").classList.contains("on"))closeSheet();return}
+ $("lines").innerHTML=k.map((n,i)=>{const c=cart[n];return `<div class="line-i"><span>${n}<br><small>${fmt(c.p)} each · ${fmt(c.p*c.q)}</small></span><span class="qty"><button data-n="${i}" data-d="-1" aria-label="${c.q===1?'Remove '+n:'Decrease '+n}">${c.q===1?'🗑':'−'}</button><span>${c.q}</span><button data-n="${i}" data-d="1" aria-label="Increase ${n}">+</button></span></div>`}).join("");$("total").textContent=fmt(sum())}
+function openSheet(){if(!qty())return;lastFocus=document.activeElement;lines();$("sheet").classList.add("on");document.body.style.overflow="hidden";$("panel").focus()}
+function closeSheet(){$("sheet").classList.remove("on");document.body.style.overflow="";const t=lastFocus&&lastFocus.offsetParent!==null?lastFocus:document.querySelector(".bar .wa");if(t)t.focus()}
+function orderUrl(){let m=`Namaste ${CONFIG.name}! 🙏\n`;const e=Object.entries(cart);
+ if(e.length){m+="I'd like to order:\n";e.forEach(([n,c])=>m+=`• ${c.q} × ${n} – ${fmt(c.p*c.q)}\n`);m+=`\nTotal: ${fmt(sum())}\n\nName:\nDelivery address:\nPayment: Cash / UPI`}else m+="I'd like to place an order.";
+ return `https://wa.me/${WA}?text=${encodeURIComponent(m)}`}
+function order(){const u=orderUrl(),w=window.open(u,"_blank");if(w)w.opener=null;else location.href=u}
+document.querySelectorAll("[data-order]").forEach(a=>{a.href="https://wa.me/"+WA;a.target="_blank";a.rel="noopener";a.onclick=e=>{e.preventDefault();order()}});
+$("tabs").onclick=e=>{const b=e.target.closest("[data-cat]");if(!b)return;const i=b.dataset.cat;cat=cats[i];tabs();items();const t=$("tabs").children[i];t.focus({preventScroll:true});t.scrollIntoView({inline:"center",block:"nearest"})};
+$("items").onclick=e=>{const b=e.target.closest("[data-i]");if(!b)return;const m=MENU[cat][b.dataset.i],c=cart[m[0]]=cart[m[0]]||{p:m[1],q:0};c.q++;upd();b.classList.add("in");b.textContent="✓ Added ×"+c.q;b.setAttribute("aria-label",lab(m[0]));live(`${m[0]} added. ${qty()} items, total ${fmt(sum())}`)};
+$("lines").onclick=e=>{const b=e.target.closest("[data-n]");if(!b)return;const n=Object.keys(cart)[b.dataset.n],d=+b.dataset.d;if(!n)return;cart[n].q+=d;if(cart[n].q<1)delete cart[n];upd();items();lines();live(`${n} updated. Total ${fmt(sum())}`);if(!qty())return;const nb=$("lines").querySelector(`[data-n="${b.dataset.n}"][data-d="${d}"]`)||$("lines").querySelector("[data-n]");if(nb)nb.focus()};
+$("cartBtn").onclick=openSheet;$("send").onclick=order;$("close").onclick=closeSheet;
+$("sheet").onclick=e=>{if(e.target.id==="sheet")closeSheet()};
+$("sheet").addEventListener("keydown",e=>{if(e.key!=="Tab")return;const f=[...$("panel").querySelectorAll("button")],a=f[0],z=f[f.length-1],x=document.activeElement;if(e.shiftKey&&(x===a||x===$("panel"))){e.preventDefault();z.focus()}else if(!e.shiftKey&&x===z){e.preventDefault();a.focus()}});
+$("rev").innerHTML=REVIEWS.map(r=>`<div class="r"><div class="st" aria-hidden="true">★★★★★</div><span class="sr">5 out of 5 stars</span><q>${r[2]}</q><div class="who"><i aria-hidden="true">${r[0][0]}</i><div>${r[0]}<small>${r[1]}</small></div></div></div>`).join("");
+document.querySelectorAll("[data-c]").forEach(el=>{const v=CONFIG[el.dataset.c];el.textContent=v;const h=el.dataset.href;if(h)el.href=h+":"+v.replace(/[^\d+@a-zA-Z.\-_]/g,"")});
+if(!CONFIG.showPlaceholderTags)$("contactBox").classList.add("hide-tags");
+const q=encodeURIComponent(CONFIG.name+", "+CONFIG.address);
+$("mapOpen").href="https://www.google.com/maps/search/?api=1&query="+q;$("mapDir").href="https://www.google.com/maps/dir/?api=1&destination="+q;
+const bg=$("bg"),lk=$("links");
+function closeMenu(f){lk.classList.remove("open");bg.classList.remove("on");bg.setAttribute("aria-expanded","false");bg.setAttribute("aria-label","Open menu");if(f)bg.focus()}
+bg.onclick=()=>{if(lk.classList.contains("open"))return closeMenu();lk.classList.add("open");bg.classList.add("on");bg.setAttribute("aria-expanded","true");bg.setAttribute("aria-label","Close menu")};
+lk.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>closeMenu()));
+document.addEventListener("click",e=>{if(!e.target.closest("nav"))closeMenu()});
+document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;if($("sheet").classList.contains("on"))closeSheet();else if(lk.classList.contains("open"))closeMenu(true)});
+const rvs=document.querySelectorAll(".rv");
+if("IntersectionObserver" in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});rvs.forEach(el=>io.observe(el))}else rvs.forEach(el=>el.classList.add("in"));
+$("yr").textContent=new Date().getFullYear();tabs();items();
+</script>
+</body>
+</html>
